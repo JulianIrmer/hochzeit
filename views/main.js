@@ -14,6 +14,7 @@ function submitForm() {
     const vegan = document.querySelector('js-vegan');
     const vegetarian = document.querySelector('js-vegetarian');
     const intolerances = document.querySelector('js-intolerances');
+    const music = document.querySelector('js-music');
 
     const data = {
         firstName,
@@ -24,7 +25,8 @@ function submitForm() {
         transport,
         vegan,
         vegetarian,
-        intolerances
+        intolerances,
+        music
     };
 
     fetch(url, {

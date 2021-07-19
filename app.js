@@ -70,7 +70,8 @@ app.get('/api/getdata', async (req, res) => {
         {header: 'Transport', key: 'transport', width: 32},
         {header: 'Vegan', key: 'vegan', width: 32},
         {header: 'Vegetarisch', key: 'vegetarian', width: 32},
-        {header: 'Unverträglichkeiten', key: 'intolerances', width: 32}
+        {header: 'Unverträglichkeiten', key: 'intolerances', width: 32},
+        {header: 'Musikwünsche', key: 'music', width: 200},
     ];
     
     data.forEach((entry, index) => {
@@ -84,10 +85,10 @@ app.get('/api/getdata', async (req, res) => {
             transport: entry.transport,
             vegan: entry.vegan,
             vegetarian: entry.vegetarian,
-            intolerances: entry.intolerances
+            intolerances: entry.intolerances,
+            music: entry.music
         });
     });
-    // await workbook.xlsx.writeFile('test.xlsx');
 
     workbook.xlsx.writeFile('test.xlsx').then(() => {
         base64.encode(__dirname + '/test.xlsx', (err, base64String) => {
