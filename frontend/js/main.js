@@ -48,7 +48,7 @@ async function submitForm(e) {
 
     response = await response.json();
 
-    if (response.succes) {
+    if (response.success) {
         hideSpinner();
         window.location.href = '/'
     }
