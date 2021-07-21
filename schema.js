@@ -7,10 +7,10 @@ let DataSchema = new mongoose.Schema({
     email: String,
     attendance: Boolean,
     transport: Boolean,
-    vegan: Boolean,
-    vegetarian: Boolean,
+    food: String,
     intolerances: String,
-    music: String
+    music: String,
+    other: String
 }, {collection: 'data'});
 
 DataSchema = mongoose.model('Data', DataSchema);

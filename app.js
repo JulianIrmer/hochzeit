@@ -36,9 +36,8 @@ app.get('/', (req, res) => {
 
 app.post('/api/add', (req, res) => {
     const data = new DataSchema(req.body);
-    data.save((err, doc) => {
-        res.redirect('/success');
-    });
+    data.save();
+    res.send({success: true});
 });
 
 app.get('/api/getdata', async (req, res) => {
@@ -57,10 +56,10 @@ app.get('/api/getdata', async (req, res) => {
         {header: 'Email', key: 'email', width: 120},
         {header: 'Zusage', key: 'attendance', width: 32},
         {header: 'Transport', key: 'transport', width: 32},
-        {header: 'Vegan', key: 'vegan', width: 32},
-        {header: 'Vegetarisch', key: 'vegetarian', width: 32},
+        {header: 'Essen', key: 'food', width: 32},
         {header: 'Unverträglichkeiten', key: 'intolerances', width: 32},
         {header: 'Musikwünsche', key: 'music', width: 200},
+        {header: 'Sonstiges', key: 'other', width: 200},
     ];
     
     data.forEach((entry, index) => {
@@ -72,10 +71,10 @@ app.get('/api/getdata', async (req, res) => {
             email: entry.email,
             attendance: entry.attendance,
             transport: entry.transport,
-            vegan: entry.vegan,
-            vegetarian: entry.vegetarian,
+            food: entry.food,
             intolerances: entry.intolerances,
-            music: entry.music
+            music: entry.music,
+            other: entry.other,
         });
     });
 
