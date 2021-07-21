@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const {DataSchema} = require('./schema');
 const ExcelJS = require('exceljs');
 const base64 = require('file-base64');
+const cors = require('cors');
 require('dotenv').config()
 
 
@@ -15,6 +16,7 @@ const PASSWORD = process.env.PASSWORD;
 
 app.use(bodyParser.json());
 app.use(express.static('views'));
+app.use(cors());
 
 // DB conntection
 const mongo_options = {
@@ -28,28 +30,15 @@ mongoose.connect(DB_URL, mongo_options, (err) => {
     console.log('###### CONNECTED TO MONGODB ######');
 });
 
-
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/views/index.html'));
+    res.json({message: 'Server running'});
 });
-
-app.get('/success', (req, res) => {
-    res.sendFile(path.join(__dirname + '/views/success.html'));
-});
-
-
 
 app.post('/api/add', (req, res) => {
-    console.log(req.body);
-
     const data = new DataSchema(req.body);
     data.save((err, doc) => {
         res.redirect('/success');
     });
-});
-
-app.get('/admin', (req, res) => {
-    res.sendFile(path.join(__dirname + '/views/admin.html'));
 });
 
 app.get('/api/getdata', async (req, res) => {

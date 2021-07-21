@@ -1,10 +1,17 @@
 function init() {
+    warmUp();
+    console.log('init');
     const submitButton = document.querySelector('.js-submit');
-    submitButton.addEventListener('click', submitForm)
+    submitButton.addEventListener('click', submitForm);
+}
+
+function warmUp() {
+    const url = 'http://kimundtom.herokuapp.com/';
+    fetch(url);
 }
 
 function submitForm() {
-    const url = window.location.protocol + '//' + window.location.host;
+    const url = 'http://kimundtom.herokuapp.com/api/add';
     const firstName = document.querySelector('js-firstName');
     const lastName = document.querySelector('js-lastName');
     const email = document.querySelector('js-email');
