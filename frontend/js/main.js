@@ -1,6 +1,6 @@
 function init() {
     warmUp();
-    console.log('init');
+    intersection();
     const submitButton = document.querySelector('.js-submit');
     submitButton.addEventListener('click', submitForm);
 }
@@ -10,18 +10,20 @@ function warmUp() {
     fetch(url);
 }
 
-function submitForm() {
+async function submitForm(e) {
+    e.preventDefault();
+    showSpinner();
     const url = 'http://kimundtom.herokuapp.com/api/add';
-    const firstName = document.querySelector('js-firstName');
-    const lastName = document.querySelector('js-lastName');
-    const email = document.querySelector('js-email');
-    const phone = document.querySelector('js-phone');
-    const attendance = document.querySelector('js-attendance');
-    const transport = document.querySelector('js-transport');
-    const vegan = document.querySelector('js-vegan');
-    const vegetarian = document.querySelector('js-vegetarian');
-    const intolerances = document.querySelector('js-intolerances');
-    const music = document.querySelector('js-music');
+    const firstName = document.querySelector('.js-firstName').value;
+    const lastName = document.querySelector('.js-lastName').value;
+    const email = document.querySelector('.js-email').value;
+    const phone = document.querySelector('.js-phone').value;
+    const attendance = document.querySelector('.js-attendance').value;
+    const transport = document.querySelector('.js-transport').value;
+    const food = document.querySelector('.js-food').value;
+    const intolerances = document.querySelector('.js-intolerances').value;
+    const music = document.querySelector('.js-music').value;
+    const other = document.querySelector('.js-other').value;
 
     const data = {
         firstName,
@@ -30,19 +32,63 @@ function submitForm() {
         phone,
         attendance,
         transport,
-        vegan,
-        vegetarian,
+        food,
         intolerances,
-        music
+        music,
+        other
     };
 
-    fetch(url, {
+    let response = await fetch(url, {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
             'Content-Type': 'application/json'
         }
     });
+
+    response = response.json();
+
+    if (response.succes) {
+        hideSpinner();
+        window.location.href = '/'
+    }
+
+}
+
+function intersection() {
+    const elements = document.querySelectorAll('.animate');
+    const options = {
+        root: document.querySelector('body'),
+        rootMargin: '0px',
+        threshold: 1.0
+    };
+
+    observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            animate(entry);
+        });
+    });
+      
+    elements.forEach(image => {
+        observer.observe(image);
+    });
+}
+
+function animate(element) {
+    const {target} = element;
+    console.log(target);
+    target.classList.remove('fade-in');
+    target.classList.remove('right-to-left');
+}
+
+function showSpinner() {
+    const spinner = document.querySelector('.js-spinner');
+    spinner.classList.remove('d-none');
+}
+
+function hideSpinner() {
+    const spinner = document.querySelector('.js-spinner');
+    spinner.classList.add('d-none');
 }
 
 init();

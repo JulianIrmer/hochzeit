@@ -5,39 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kim & Tom | Hochzeit</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
+    <div class="js-spinner d-none">
+        <div class="heart"></div>
+    </div>
     <header>
-        SOME IMAGE WITH SOME TEXT
+        <h1 class="headline-font">SOME IMAGE WITH SOME TEXT</h1>
     </header>
 
-    <div class="content">
-        <h2>
-            SOME HEADLINE
-        </h2>
-        <p>Conetent bla bla</p>
+    <div class="box outward-arrow-box flieder-box">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, velit perspiciatis mollitia pariatur commodi rem ea culpa tempora earum blanditiis?
+    </div>
+    <div class="box inward-arrow-box brown-box">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, sunt repellat iusto iure rem officiis perspiciatis mollitia esse quis iste, accusantium minus. Deserunt facere vel iure a sunt cupiditate nesciunt obcaecati, assumenda facilis, accusantium, ea in ab magni quibusdam libero?
     </div>
 
-    <form action="">
-        <input type="text" class="js-firstName" placeholder="Vorname">
-        <input type="text" class="js-lastName" placeholder="Nachname">
-        <input type="text" class="js-email" placeholder="Email">
-        <input type="text" class="js-phone" placeholder="Telefon/Handy">
-        <label for="">Zusage</label>
-        <input class="js-attendance" type="checkbox">
-        <label for="">Transport</label>
-        <input class="js-transport" type="checkbox">
-        <label for="">Vegan</label>
-        <input class="js-vegan" type="checkbox">
-        <label for="">Vegetarisch</label>
-        <input class="js-vegetarian" type="checkbox">
-        <input type="text" class="js-intolerances" placeholder="Unverträglichkeiten">
-        <input type="text" class="js-music" placeholder="Musikwünsche">
-        <button class="js-submit">Absenden!</button>
-    </form>
+    <div class="form-wrapper">
+        <form class="form-group" action="">
+            <input type="text" class="js-firstName form-control" placeholder="Vorname">
+            <input type="text" class="js-lastName form-control" placeholder="Nachname">
+            <input type="text" class="js-email form-control" placeholder="Email">
+            <input type="text" class="js-phone form-control" placeholder="Telefon/Handy">
 
-    <script src="./js/ScrollMagic.min.js"></script>
+            <!-- ZUSAGE -->
+            <label class="form-label" for="">Zusage</label>
+            <select class="form-select js-attendance" name="" id="">
+                <option value="">Bitte auswählen...</option>
+                <option value="true">Ja</option>
+                <option value="false">Nein</option>
+            </select>
+
+            <!-- TRANSPORT -->
+            <label class="form-label" for="">Transport</label>
+            <select class="form-select js-transport" name="" id="">
+                <option value="">Bitte auswählen</option>
+                <option value="true">Ja</option>
+                <option value="false">Nein</option>
+            </select>
+
+            <!-- ESSEN -->
+            <label class="form-label" for="">Vegan</label>
+            <select class="form-select js-food" name="" id="">
+                <option value="">Bitte auswählen</option>
+                <option value="vegetarian">Vegetarisch</option>
+                <option value="vegan">Vegan</option>
+            </select>
+
+            <!-- INTOLERANZEN -->
+            <input type="text" class="js-intolerances form-control" placeholder="Unverträglichkeiten">
+
+            <!-- MUSIK -->
+            <input type="text" class="js-music form-control" placeholder="Musikwünsche">
+
+            <!-- SONSTIGES -->
+            <input type="text" class="js-other form-control" placeholder="Sonstige Anmerkungen, Fragen etc...">
+
+            <!-- SUBMIT -->
+            <button class="js-submit btn btn-xl btn-primary">Absenden!</button>
+        </form>
+    </div>
+
     <script src="./js/main.js"></script>
 </body>
 </html>
