@@ -46,7 +46,7 @@ async function submitForm(e) {
         }
     });
 
-    response = response.json();
+    response = await response.json();
 
     if (response.succes) {
         hideSpinner();
