@@ -92,15 +92,15 @@ function intersection() {
 function onIntersection(entries) {
     for (const entry of entries) {
         if (entry.isIntersecting) {
-            animate(entry);
+            if (entry.target.classList.contains('animate')) {
+                animate(entry);
+            }
         }
     }
 };
 
-
 function animate(element) {
     const {target} = element;
-    console.log(target);
     target.classList.remove('left-to-right');
     target.classList.remove('right-to-left');
     target.classList.remove('fade-in');

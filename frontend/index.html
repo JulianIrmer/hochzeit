@@ -5,7 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kim & Tom | Hochzeit</title>
-    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./styles/bootstrap.min.css"> -->
+    
+    <link rel="preload" href="./styles/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./styles/bootstrap.min.css"></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.2/css/lightgallery-core.min.css" integrity="sha512-7BiTNgtdIsAjktzlQKRnnkKUf8xlHFQgnPC+Tcj12yrCRrk6GfzC+mDzv8jWFu6V4HWrNqPV+q4UJLMz4MwGtw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.2/css/lg-thumbnail.min.css" integrity="sha512-wHHBD+hSImJWcX192FT77uzFT4pVJDZ5sTiVYE3cArMtIix9lycXS0lvuLwRVyyFQO4pTj7MKxSuFKFMVzjK2w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.2/css/lg-share.min.css" integrity="sha512-dOqsuo1HGMv5ohBl/0OIUVzkwFLF8ZmjhpZp2VT2mpH5UuOJXwtBhxxtbrrEIpvTDWm7mESg0JsEl4zkUGv/gw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
@@ -19,6 +25,11 @@
             <h1 class="headline-font">KIM & TOM</h1>
             <h1 class="headline-font">24.09.2021</h1>
         </header>
+
+        <div class="box gallery-box">
+            <h2 class="headline-font animate left-to-right">Galerie</h2>
+            <div id="animated-thumbnails" class="js-image-container row"></div>
+        </div>
     
         <div class="box arrow-box flieder-box">
             <h2 class="headline-font animate right-to-left">Ablauf</h2>
@@ -79,7 +90,7 @@
             <img src="./img/strauß.jpg" loading="lazy" alt="">
         </div>
     
-        <div class="box arrow-box">
+        <div class="box arrow-box big-box">
             <h2 class="headline-font animate left-to-right">Trauung</h2>
             <h2 class="headline-font animate right-to-left">& Feier</h2>
             <p class="">
@@ -196,6 +207,11 @@
 
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.2/lightgallery.min.js" integrity="sha512-V7SawhQGQwOTADAu1i4TTivsD6Cw54TcZYJAFfuPwUAutg+XIUQmc2blCB9mwdbCerqFO+TTRrt+gUgn/Np1PQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-TGN7EYTc45WA8WclbKLzonlVoFH+OzTpqDBSsjPc1tO+UHgJZHIwPDMRxFixCZOa+V5PdqKRFbUwkLAGS71QjA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.2/plugins/share/lg-share.min.js" integrity="sha512-ohgrcwRjCJZkrK4Wm7gUHI3pGii28zNZn0uBIbm2YDexL4kjWsZKlyd6iyKLf7TWM06AFl6h6Nk3uoGJ530WxA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/gallery.js"></script>
 </body>
 </html>
