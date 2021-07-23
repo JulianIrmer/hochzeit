@@ -1,8 +1,8 @@
 function init() {
     warmUp();
-    intersection();
     const submitButton = document.querySelector('.js-submit');
     submitButton.addEventListener('click', submitForm);
+    intersection();
 }
 
 function warmUp() {
@@ -50,35 +50,60 @@ async function submitForm(e) {
 
     if (response.success) {
         hideSpinner();
-        window.location.href = '/'
+        showSuccessMessage();
+        resetForm();
     }
+}
 
+function resetForm() {
+    const firstName = document.querySelector('.js-firstName').value = '';
+    const lastName = document.querySelector('.js-lastName').value = '';
+    const email = document.querySelector('.js-email').value = '';
+    const phone = document.querySelector('.js-phone').value = '';
+    const attendance = document.querySelector('.js-attendance').value;
+    const transport = document.querySelector('.js-transport').value;
+    const food = document.querySelector('.js-food').value;
+    const intolerances = document.querySelector('.js-intolerances').value = '';
+    const music = document.querySelector('.js-music').value = '';
+    const other = document.querySelector('.js-other').value = '';
+}
+
+function showSuccessMessage() {
+    const submitButton = document.querySelector('.js-submit');
+    submitButton.innerText = 'Gespeichert!';
+    submitButton.classList.remove('btn-primary');
+    submitButton.classList.add('btn-success');
 }
 
 function intersection() {
-    const elements = document.querySelectorAll('.animate');
     const options = {
-        root: document.querySelector('body'),
-        rootMargin: '0px',
-        threshold: 1.0
+        rootMargin: '0px 0px -125px 0px',
+        threshold: 0.75
     };
 
-    observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            animate(entry);
-        });
-    });
-      
-    elements.forEach(image => {
-        observer.observe(image);
+    const observer = new IntersectionObserver(onIntersection, options);
+    const elements = document.querySelectorAll('.animate');
+  
+    elements.forEach((element) => {
+        observer.observe(element);
     });
 }
+
+function onIntersection(entries) {
+    for (const entry of entries) {
+        if (entry.isIntersecting) {
+            animate(entry);
+        }
+    }
+};
+
 
 function animate(element) {
     const {target} = element;
     console.log(target);
-    target.classList.remove('fade-in');
+    target.classList.remove('left-to-right');
     target.classList.remove('right-to-left');
+    target.classList.remove('fade-in');
 }
 
 function showSpinner() {

@@ -2,7 +2,7 @@ const button = document.querySelector('.js-button');
 
 button.addEventListener('click', async () => {
     const pw = document.querySelector('.js-password');
-    const url = window.location.protocol + '//' + window.location.host;
+    const url = 'http://kimundtom.herokuapp.com';
 
     let response = await fetch(url + '/api/getdata?pw=' + pw.value);
     response = await response.json();
