@@ -11,46 +11,44 @@
     <noscript><link rel="stylesheet" href="./styles/bootstrap.min.css"></noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.2/css/lightgallery-core.min.css" integrity="sha512-7BiTNgtdIsAjktzlQKRnnkKUf8xlHFQgnPC+Tcj12yrCRrk6GfzC+mDzv8jWFu6V4HWrNqPV+q4UJLMz4MwGtw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.2/css/lg-thumbnail.min.css" integrity="sha512-wHHBD+hSImJWcX192FT77uzFT4pVJDZ5sTiVYE3cArMtIix9lycXS0lvuLwRVyyFQO4pTj7MKxSuFKFMVzjK2w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.2/css/lg-share.min.css" integrity="sha512-dOqsuo1HGMv5ohBl/0OIUVzkwFLF8ZmjhpZp2VT2mpH5UuOJXwtBhxxtbrrEIpvTDWm7mESg0JsEl4zkUGv/gw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
+    <div class="js-spinner d-none"><div class="heart"></div></div>
     <div class="content pb-5">
-        <div class="js-spinner d-none">
-            <div class="heart"></div>
-        </div>
-
-        <header class="text-center">
-            <img src="" alt="">
-            <h1 class="headline-font">KIM & TOM</h1>
-            <h1 class="headline-font">24.09.2021</h1>
+        <header class="text-center position-relative">
+            <img src="./img/header.jpg" alt="">
+            <div class="headline-container text-white w-100">
+                <h1 class="headline-font">Kim & Tom</h1>
+                <h1 class="subheadline-font">24.09.2021</h1>
+            </div>
         </header>
 
-        <div class="box gallery-box">
+        <!-- <div class="box gallery-box">
             <h2 class="headline-font animate left-to-right">Galerie</h2>
             <div id="animated-thumbnails" class="js-image-container row"></div>
-        </div>
+        </div> -->
     
         <div class="box arrow-box flieder-box">
             <h2 class="headline-font animate right-to-left">Ablauf</h2>
             <p class="text-font d-flex flex-column">
-                <span class="mb-2 animate fade-in"><b>14.30 Uhr</b> – Trauung an der Burg in Bad Bentheim</span>
-                <span class="mb-2 animate fade-in"><b>15.00 Uhr</b> – Sektempfang für das Brautpaar vor der Burg</span>
-                <span class="mb-2 animate fade-in"><b>15.30 Uhr</b> – Kaffee & Kuchen an der Diele Niehaus</span>
-                <span class="mb-2 animate fade-in"><b>18.00 Uhr</b> – Empfang des Brautpaares an der Diele Niehaus</span>
+                <span class="mb-3 animate fade-in"><b>14.30 Uhr</b> – Trauung an der Burg in Bad Bentheim</span>
+                <span class="mb-3 animate fade-in"><b>15.00 Uhr</b> – Sektempfang für das Brautpaar vor der Burg</span>
+                <span class="mb-3 animate fade-in"><b>16:30 Uhr</b> – Kaffee & Kuchen an der Diele Niehaus</span>
+                <span class="mb-3 animate fade-in"><b>18.00 Uhr</b> – Empfang an der Diele Niehaus in Bad Bentheim</span>
                 <span class="animate fade-in"><b>Ab 19.00 Uhr</b> – Eröffnung des Buffets & Feier</span>  
             </p>
         </div>
         
         <div class="img-container">
-            <img src="./img/flieder.jpg" loading="lazy" alt="">
+            <img src="./img/burg.jpg" loading="lazy" alt="">
         </div>
     
         <div class="box arrow-box">
             <h2 class="headline-font animate left-to-right">Adressen</h2>
             <p class="animate fade-in">
                 <span class="d-block w-100 animate fade-in">
-                    Burg – Schlossstraße, 48455 Bentheim
+                    Burg – Schlossstraße, 48455 Bentheim (Kein Eintritt notwendig)
                 </span>
                 <a class="mb-5 d-block invert-link animate fade-in" href="https://www.google.com/maps/dir/?api=1&destination=Burg+Schlossstraße+48455">
                     Route bei Google Maps anzeigen
@@ -65,56 +63,70 @@
         </div>
 
         <div class="img-container">
-            <img src="./img/burg.jpg" loading="lazy" alt="">
+            <img src="./img/tomsbein.jpg" loading="lazy" alt="">
         </div>
     
         <div class="box arrow-box flieder-box">
             <h2 class="headline-font animate left-to-right">Übernachtung</h2>
             <h2 class="headline-font animate right-to-left">& Hotels</h2>
             <p class="">
-                <span class="d-block mb-2 animate fade-in">Hier einige Vorschläge für euch, solltet ihr von weiter weg kommen und die Nacht in der schönen Grafschaft verbringen wollen:</span>
+                <span class="d-block mb-5 animate fade-in">
+                    In Bad Bentheim und Umgebung gibt es zahlreiche 
+                    <a class="invert-link" href="https://www.booking.com/searchresults.de.html?aid=356980;label=gog235jc-1DCAMoO0IMYmFkLWJlbnRoZWltSAdYA2g7iAEBmAEHuAEXyAEM2AED6AEB-AECiAIBqAIDuALAx_GHBsACAdICJGM1NjZmYjM1LTE3MmUtNDM4NS1hZjE2LWVhYWYyZjhkMDE1MdgCBOACAQ;sid=c80a1f0c9bff2646ce3a8c01da30e2af;dest_id=-1743035;dest_type=city;order=bayesian_review_score&" target="_blank" rel="noopener">
+                        Hotels und Ferienwohnungen
+                    </a>
+                    .
+                </span>
                 
-                <a class="invert-link d-block animate fade-in" target="_blank" rel="noopener" href="https://grossfeld.de/">
-                    Hotel Grossfeld
-                </a>
-                <a class="invert-link d-block animate fade-in" target="_blank" rel="noopener" href="https://hotel-am-berghang.de/">
-                    Hotel am Berghang
-                </a>
-                <a class="invert-link d-block animate fade-in" target="_blank" rel="noopener" href="https://www.hotel-diana-bentheim.de/">
-                    Hotel Diana
-                </a>
+                <span class="d-block animate fade-in">
+                    Mit Wohnmobilen oder Ähnlichem kann auf der angrenzenden Wiese übernachtet werden.
+                </span>
             </p>
         </div>
 
-        <div class="img-container">
-            <img src="./img/strauß.jpg" loading="lazy" alt="">
+        <div class="img-container position-relative">
+            <img class="" src="./img/rings.jpg" loading="lazy" alt="">
         </div>
     
         <div class="box arrow-box big-box">
             <h2 class="headline-font animate left-to-right">Trauung</h2>
             <h2 class="headline-font animate right-to-left">& Feier</h2>
             <p class="">
-                <span class="d-block mb-2 animate fade-in">
+                <span class="d-block mb-4 animate fade-in">
                     Entscheidet gerne selbst, ob ihr bereits zur Trauung auf die Burg kommen wollt oder erst gegen Abend zum Empfang an die Diele Niehaus.
                 </span>
-                <span class="d-block mb-2 animate fade-in">
-                    Nach der Trauung besteht für alle Gäste die Möglichkeit, einen genaueren Blick auf Burg und Stadt zu werfen. Gerne kann der 
-                    Nachmittag zur freien Verfügung genutzt werden.
+                <span class="d-block mb-4 animate fade-in">
+                    Gerne kann der 
+                    Nachmittag auch zur freien Verfügung genutzt werden.
                 </span>
-                <span class="d-block mb-2 animate fade-in">
-                    Wer eine Mitfahrgelegenheit von der Burg zur Diele benötigt, ist herzlich auf eine Planwagenfahrt durch das Gildehauser Venn 
-                    eingeladen. Wir bitten hier im Folgenden um kurze Anmeldung.
+                <span class="d-block mb-4 animate fade-in">
+                    Nach der Trauung besteht für alle Gäste die Möglichkeit, 
+                    die Burg zu besichtigen. Auch der angrenzende Schlosspark und die Stadt
+                    bieten sich für einen Spaziergang an. 
                 </span>
-                <span class="d-block mb-2 animate fade-in">
-                    An der Diele Niehaus erwarten euch dann Kaffee & Kuchen.
+                <span class="d-block mb-4 animate fade-in">
+                    An der Diele Niehaus erwarten euch dann ab 16.30 Uhr Kaffee & Kuchen.
                 </span>
             </p>
         </div>
 
-        <div class="img-container">
-            <img src="./img/rings.jpg" loading="lazy" alt="">
+        <div class="img-container position-relative">
+            <img class="" src="./img/dresscode.jpg" loading="lazy" alt="">
         </div>
         
+        <div class="box arrow-box">
+            <h2 class="headline-font animate left-to-right">Dresscode</h2>
+            <p class="animate fade-in">
+                Wir feiern im festlichen Ambiente in einer beheizten Scheune. 
+                Wir würden uns freuen, euch im schicken Dress begrüßen zu dürfen. 
+                Natürlich sollt ihr euch wohlfühlen und das Outfit tanzbar sein!
+            </p>
+        </div>
+        
+        <div class="img-container position-relative">
+            <img class="" src="./img/present.jpg" loading="lazy" alt="">
+        </div>
+
         <div class="box arrow-box flieder-box">
             <h2 class="headline-font animate left-to-right">Präsente</h2>
             <p class="animate fade-in">
@@ -125,30 +137,19 @@
             </p>
         </div>
 
-        <div class="img-container">
-            <img src="./img/table.jpg" loading="lazy" alt="">
+
+        <div class="img-container position-relative">
+            <img class="" src="./img/doggo.jpg" loading="lazy" alt="">
         </div>
 
-        <div class="box arrow-box">
-            <h2 class="headline-font animate left-to-right">Dresscode</h2>
-            <p class="animate fade-in">
-                Wir feiern im rustikal-schicken Vintage Stil in einer beheizten Scheune. Wir würden uns freuen, euch im schicken Dress 
-                begrüßen zu dürfen. Natürlich sollt ihr euch wohlfühlen und das Outfit tanzbar sein!
-            </p>
-        </div>
-
-        <div class="img-container">
-            <img src="./img/burg.jpg" loading="lazy" alt="">
-        </div>
-
-        <div class="box arrow-box flieder-box">
-            <h2 class="headline-font animate left-to-right">Infos</h2>
-            <h2 class="headline-font animate right-to-left">von euch</h2>
+        <div class="box arrow-box big-box flieder-box">
+            <h2 class="headline-font animate left-to-right">Jetzt seid</h2>
+            <h2 class="headline-font animate right-to-left">ihr dran!</h2>
             <p class="">
-                <span class="d-block mb-2 animate fade-in">Damit wir gemeinsam einen wunderschönen Tag verbringen können, benötigen wir einige Informationen von euch. </span>
-                <span class="d-block mb-2 animate fade-in">Wir würden uns freuen, wenn ihr uns neben der Zu- oder Absage noch weitere Informationen hinterlassen würdet. </span>
-                <span class="d-block mb-2 animate fade-in">Füllt die Felder aus, und schickt das Formular ab. </span>
-                <span class="d-block mb-2 animate fade-in">Wir freuen uns auf euch!</span>
+                <span class="d-block mb-4 animate fade-in">Damit wir gemeinsam einen wunderschönen Tag verbringen können, benötigen wir einige Informationen von euch. </span>
+                <span class="d-block mb-4 animate fade-in">Wir würden uns freuen, wenn ihr uns neben der Zu- oder Absage noch weitere Informationen hinterlassen würdet. </span>
+                <span class="d-block mb-4 animate fade-in">Füllt die Felder aus, und schickt das Formular ab. </span>
+                <span class="d-block mb-4 animate fade-in">Wir freuen uns auf euch!</span>
                 <span class="headline-font subscription d-block w-100 text-center animate fade-in">Kim & Tom</span>
             </p>
         </div>
@@ -164,6 +165,7 @@
                 <input type="text" class="js-lastName form-control" placeholder="Nachname">
                 <input type="email" class="js-email form-control" placeholder="Email">
                 <input type="text" pattern="[0-9]*" class="js-phone form-control" placeholder="Telefon/Handy">
+                <input type="text" class="js-address form-control" placeholder="Anschrift">
     
                 <!-- ZUSAGE -->
                 <label class="form-label" for="">Zusage</label>
@@ -173,18 +175,11 @@
                     <option value="false">Nein</option>
                 </select>
     
-                <!-- TRANSPORT -->
-                <label class="form-label" for="">Transport</label>
-                <select class="form-select js-transport" name="" id="">
-                    <option value="">Bitte auswählen</option>
-                    <option value="true">Ja</option>
-                    <option value="false">Nein</option>
-                </select>
-    
                 <!-- ESSEN -->
                 <label class="form-label" for="">Essen</label>
                 <select class="form-select js-food" name="" id="">
                     <option value="">Bitte auswählen</option>
+                    <option value="nothing">Keine Besonderheiten</option>
                     <option value="vegetarian">Vegetarisch</option>
                     <option value="vegan">Vegan</option>
                 </select>
@@ -204,13 +199,11 @@
                 </div>
             </form>
         </div>
-
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.2/lightgallery.min.js" integrity="sha512-V7SawhQGQwOTADAu1i4TTivsD6Cw54TcZYJAFfuPwUAutg+XIUQmc2blCB9mwdbCerqFO+TTRrt+gUgn/Np1PQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-TGN7EYTc45WA8WclbKLzonlVoFH+OzTpqDBSsjPc1tO+UHgJZHIwPDMRxFixCZOa+V5PdqKRFbUwkLAGS71QjA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.2/plugins/share/lg-share.min.js" integrity="sha512-ohgrcwRjCJZkrK4Wm7gUHI3pGii28zNZn0uBIbm2YDexL4kjWsZKlyd6iyKLf7TWM06AFl6h6Nk3uoGJ530WxA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/main.js"></script>
     <script src="./js/gallery.js"></script>
 </body>
