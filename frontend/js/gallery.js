@@ -1,11 +1,15 @@
 let lazyLoadInstance;
+
 function init() {
     lazyLoadInstance = new LazyLoad();
+    const container = document.querySelector('#animated-thumbnails');
+    if (!container) return;
     addImages();
     lightGallery(document.getElementById('animated-thumbnails'), {
-        thumbnail: true,
-        controls: true,
-        download: true
+        animateThumb: false,
+        zoomFromOrigin: false,
+        allowMediaOverlap: true,
+        toggleThumb: true
     });
     hideSpinner();
 }
