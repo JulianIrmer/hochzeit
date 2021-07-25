@@ -1,8 +1,8 @@
 function init() {
-    warmUp();
     const submitButton = document.querySelector('.js-submit');
     submitButton.addEventListener('click', submitForm);
     intersection();
+    warmUp();
 }
 
 function warmUp() {
@@ -18,8 +18,8 @@ async function submitForm(e) {
     const lastName = document.querySelector('.js-lastName').value;
     const email = document.querySelector('.js-email').value;
     const phone = document.querySelector('.js-phone').value;
+    const address = document.querySelector('.js-address').value;
     const attendance = document.querySelector('.js-attendance').value;
-    const transport = document.querySelector('.js-transport').value;
     const food = document.querySelector('.js-food').value;
     const intolerances = document.querySelector('.js-intolerances').value;
     const music = document.querySelector('.js-music').value;
@@ -30,8 +30,8 @@ async function submitForm(e) {
         lastName,
         email,
         phone,
+        address,
         attendance,
-        transport,
         food,
         intolerances,
         music,
@@ -56,12 +56,12 @@ async function submitForm(e) {
 }
 
 function resetForm() {
-    const firstName = document.querySelector('.js-firstName').value = '';
+    document.querySelector('.js-firstName').value = '';
     const lastName = document.querySelector('.js-lastName').value = '';
     const email = document.querySelector('.js-email').value = '';
     const phone = document.querySelector('.js-phone').value = '';
+    const address = document.querySelector('.js-address').value = '';
     const attendance = document.querySelector('.js-attendance').value;
-    const transport = document.querySelector('.js-transport').value;
     const food = document.querySelector('.js-food').value;
     const intolerances = document.querySelector('.js-intolerances').value = '';
     const music = document.querySelector('.js-music').value = '';
