@@ -6,14 +6,14 @@ function init() {
 }
 
 function warmUp() {
-    const url = 'http://kimundtom.herokuapp.com/';
+    const url = 'https://kimundtom.herokuapp.com/';
     fetch(url);
 }
 
 async function submitForm(e) {
     e.preventDefault();
     showSpinner();
-    const url = 'http://kimundtom.herokuapp.com/api/add';
+    const url = 'https://kimundtom.herokuapp.com/api/add';
     const firstName = document.querySelector('.js-firstName').value;
     const lastName = document.querySelector('.js-lastName').value;
     const email = document.querySelector('.js-email').value;
