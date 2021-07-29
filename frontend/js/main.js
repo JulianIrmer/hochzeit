@@ -24,6 +24,7 @@ async function submitForm(e) {
     const intolerances = document.querySelector('.js-intolerances').value;
     const music = document.querySelector('.js-music').value;
     const other = document.querySelector('.js-other').value;
+    const vax = document.querySelector('.js-vax').value;
 
     const data = {
         firstName,
@@ -35,7 +36,8 @@ async function submitForm(e) {
         food,
         intolerances,
         music,
-        other
+        other,
+        vax
     };
 
     let response = await fetch(url, {
@@ -66,6 +68,7 @@ function resetForm() {
     const intolerances = document.querySelector('.js-intolerances').value = '';
     const music = document.querySelector('.js-music').value = '';
     const other = document.querySelector('.js-other').value = '';
+    const vax = document.querySelector('.js-vax').value = '';
 }
 
 function showSuccessMessage() {

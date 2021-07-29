@@ -56,6 +56,7 @@ app.get('/api/getdata', async (req, res) => {
         {header: 'Email', key: 'email', width: 120},
         {header: 'Anschrift', key: 'address', width: 120},
         {header: 'Zusage', key: 'attendance', width: 32},
+        {header: 'Vollst. geimpft', key: 'vax', width: 32},
         {header: 'Essen', key: 'food', width: 32},
         {header: 'Unverträglichkeiten', key: 'intolerances', width: 32},
         {header: 'Musikwünsche', key: 'music', width: 200},
@@ -75,6 +76,7 @@ app.get('/api/getdata', async (req, res) => {
             intolerances: entry.intolerances,
             music: entry.music,
             other: entry.other,
+            vax: entry.vax,
         });
     });
 
