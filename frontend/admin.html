@@ -5,12 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kim & Tom || Admin Area</title>
+    <link rel="preload" href="./styles/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./styles/bootstrap.min.css"></noscript>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/admin.css">
 </head>
 <body>
-    <input class="js-password" type="password">
-    <button class="js-button">Einloggen</button>
-    <div class="js-data-container"></div>
+    <div class="admin-wrapper d-flex justify-content-center mt-5">
+        <input class="js-password" type="password">
+        <button class="js-button">Einloggen</button>
+        <div class="js-data-container"></div>
+    </div>
     <script src="./js/admin.js"></script>
 </body>
 </html>

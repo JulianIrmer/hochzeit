@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(211, 211, 211);
+}
+.content {
+    background-color: #a08a71;
+}
+.box-color-one {
+    background-color: #FAEBD7;
+    background-blend-mode: multiply;
+    background-image: url('../img/texture/niceSnow.png');
+    color: black;
+}
+.box-color-two {
+    background-color: #cdb8e0;
+    background-blend-mode: multiply;
+    background-image: url('../img/texture/niceSnow.png');
+    color: black;
+}
+p {
+    font-family: Amantic;
+}
+.headline-font {
+    font-family: DancingScript;
+}
+.subheadline-font {
+    font-family: Amantic;
+}
+.tick {
+    font-family: DancingScript;
+}
+@font-face {
+        font-family: 'DancingScript';
+        src: url('../font/DancingScript.woff') format('woff');
+    }@font-face {
+        font-family: 'Amantic';
+        src: url('../font/Amantic.woff') format('woff');
+    }@font-face {
+        font-family: 'Amantic';
+        src: url('../font/Amantic.woff') format('woff');
+    }

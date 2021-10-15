@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kim & Tom | Hochzeit</title>
-    <!-- <link rel="stylesheet" href="./styles/bootstrap.min.css"> -->
     
     <link rel="preload" href="./styles/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="./styles/bootstrap.min.css"></noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.2/css/lightgallery-core.min.css" integrity="sha512-7BiTNgtdIsAjktzlQKRnnkKUf8xlHFQgnPC+Tcj12yrCRrk6GfzC+mDzv8jWFu6V4HWrNqPV+q4UJLMz4MwGtw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.2/css/lg-thumbnail.min.css" integrity="sha512-wHHBD+hSImJWcX192FT77uzFT4pVJDZ5sTiVYE3cArMtIix9lycXS0lvuLwRVyyFQO4pTj7MKxSuFKFMVzjK2w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.2/css/lightgallery-core.min.css" integrity="sha512-7BiTNgtdIsAjktzlQKRnnkKUf8xlHFQgnPC+Tcj12yrCRrk6GfzC+mDzv8jWFu6V4HWrNqPV+q4UJLMz4MwGtw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.2/css/lg-thumbnail.min.css" integrity="sha512-wHHBD+hSImJWcX192FT77uzFT4pVJDZ5sTiVYE3cArMtIix9lycXS0lvuLwRVyyFQO4pTj7MKxSuFKFMVzjK2w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/theme.css">
+    <link href="https://unpkg.com/@pqina/flip/dist/flip.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="js-spinner d-none"><div class="heart"></div></div>
@@ -28,8 +29,22 @@
             <h2 class="headline-font animate left-to-right">Galerie</h2>
             <div id="animated-thumbnails" class="js-image-container row"></div>
         </div> -->
+
+        <div class="box box-color-two small-box">
+            <h2 class="headline-font animate left-to-right">Countdown</h2>
+            <div class="tick" data-did-init="handleTickInit">
+                <div data-repeat="true" data-layout="horizontal fit" data-transform="preset(d, h, m, s) -> delay">
+                    <div class="tick-group">
+                        <div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
+                            <span data-view="flip"></span>
+                        </div>
+                        <span data-key="label" data-view="text" class="tick-label"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
     
-        <div class="box arrow-box flieder-box">
+        <div class="box box-color-one">
             <h2 class="headline-font animate right-to-left">Ablauf</h2>
             <p class="text-font d-flex flex-column">
                 <span class="mb-3 animate fade-in"><b>14.30 Uhr</b> – Trauung an der Burg in Bad Bentheim</span>
@@ -44,7 +59,7 @@
             <img src="./img/burg.jpg" loading="lazy" alt="">
         </div>
     
-        <div class="box arrow-box">
+        <div class="box box-color-two">
             <h2 class="headline-font animate left-to-right">Adressen</h2>
             <p class="animate fade-in">
                 <span class="d-block w-100 animate fade-in">
@@ -66,7 +81,7 @@
             <img src="./img/tomsbein.jpg" loading="lazy" alt="">
         </div>
     
-        <div class="box arrow-box flieder-box">
+        <div class="box box-color-one">
             <h2 class="headline-font animate left-to-right">Übernachtung</h2>
             <h2 class="headline-font animate right-to-left">& Hotels</h2>
             <p class="">
@@ -88,7 +103,7 @@
             <img class="" src="./img/rings.jpg" loading="lazy" alt="">
         </div>
     
-        <div class="box arrow-box big-box">
+        <div class="box big-box box-color-two">
             <h2 class="headline-font animate left-to-right">Trauung</h2>
             <h2 class="headline-font animate right-to-left">& Feier</h2>
             <p class="">
@@ -114,7 +129,7 @@
             <img class="" src="./img/dresscode.jpg" loading="lazy" alt="">
         </div>
         
-        <div class="box arrow-box">
+        <div class="box box-color-one">
             <h2 class="headline-font animate left-to-right">Dresscode</h2>
             <p class="animate fade-in">
                 Wir feiern im festlichen Ambiente in einer beheizten Scheune. 
@@ -127,7 +142,7 @@
             <img class="" src="./img/present.jpg" loading="lazy" alt="">
         </div>
 
-        <div class="box arrow-box flieder-box">
+        <div class="box box-color-two">
             <h2 class="headline-font animate left-to-right">Präsente</h2>
             <p class="animate fade-in">
                 <span class="d-block">
@@ -142,7 +157,7 @@
             <img class="" src="./img/doggo.jpg" loading="lazy" alt="">
         </div>
 
-        <div class="box arrow-box big-box flieder-box">
+        <div class="box big-box box-color-one">
             <h2 class="headline-font animate left-to-right">Jetzt seid</h2>
             <h2 class="headline-font animate right-to-left">ihr dran!</h2>
             <p class="">
@@ -176,7 +191,7 @@
                 </select>
 
                 <!-- Impfung -->
-                <label class="form-label" for="">Vollständig geimpft</label>
+                <label class="form-label" for="">Vollständig geimpft (am 24.09.2021)</label>
                 <select class="form-select js-vax" name="" id="">
                     <option value="">Bitte auswählen...</option>
                     <option value="true">Ja</option>
@@ -211,10 +226,39 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.2/lightgallery.min.js" integrity="sha512-V7SawhQGQwOTADAu1i4TTivsD6Cw54TcZYJAFfuPwUAutg+XIUQmc2blCB9mwdbCerqFO+TTRrt+gUgn/Np1PQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-TGN7EYTc45WA8WclbKLzonlVoFH+OzTpqDBSsjPc1tO+UHgJZHIwPDMRxFixCZOa+V5PdqKRFbUwkLAGS71QjA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.2/lightgallery.min.js" integrity="sha512-V7SawhQGQwOTADAu1i4TTivsD6Cw54TcZYJAFfuPwUAutg+XIUQmc2blCB9mwdbCerqFO+TTRrt+gUgn/Np1PQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-TGN7EYTc45WA8WclbKLzonlVoFH+OzTpqDBSsjPc1tO+UHgJZHIwPDMRxFixCZOa+V5PdqKRFbUwkLAGS71QjA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="https://unpkg.com/@pqina/flip/dist/flip.min.js"></script>
     <script src="./js/main.js"></script>
-    <script src="./js/gallery.js"></script>
+    <!-- <script src="./js/gallery.min.js"></script> -->
+</div>
+
+</div>
+
+<script>
+    function handleTickInit(tick) {
+        var locale = {
+            DAY_PLURAL: 'Tage',
+            DAY_SINGULAR: 'Tag',
+            HOUR_PLURAL: 'Stunden',
+            HOUR_SINGULAR: 'Stunde',
+            MINUTE_PLURAL: 'Minuten',
+            MINUTE_SINGULAR: 'Minute',
+            SECOND_PLURAL: 'Sekunden',
+            SECOND_SINGULAR: 'Sekunde',
+        };
+
+        for (var key in locale) {
+            if (!locale.hasOwnProperty(key)) { continue; }
+            tick.setConstant(key, locale[key]);
+        }
+        var counter = Tick.count.down('2021-12-24T18:00:00+01:00');
+
+        counter.onupdate = function(value) {
+          tick.value = value;
+        };
+    }
+</script>
 </body>
 </html>

@@ -28,23 +28,11 @@ html, body {
     overflow-x: hidden;
 }
 
-body {
-    background-color: rgb(211, 211, 211);
-}
-
 header {
     height: 100%;
     -webkit-clip-path: polygon(0% 0%, 50% 0, 100% 0%, 100% calc(100% - 100px), 50% 100%, 0 calc(100% - 100px));
             clip-path: polygon(0% 0%, 50% 0, 100% 0%, 100% calc(100% - 100px), 50% 100%, 0 calc(100% - 100px));
 }
-
-/* @media screen and (min-width: 768px) {
-    header {
-        height: 1200px;
-        -webkit-clip-path: polygon(0% 0%, 50% 0, 100% 0%, 100% 1100px, 50% 100%, 0 1100px);
-            clip-path: polygon(0% 0%, 50% 0, 100% 0%, 100% 1100px, 50% 100%, 0 1100px);
-    }
-} */
 
 .headline-container {
     position: absolute;
@@ -74,7 +62,6 @@ header {
 }
 
 .headline-font {
-    /* font-family: 'dancingScript', Fallback, sans-serif; */
     font-family: 'Biloxi', Fallback, sans-serif;
     font-weight: bold;
 }
@@ -137,11 +124,19 @@ h2 {
     -webkit-clip-path: polygon(0% 0%, 50% 100px, 100% 0%, 100% 800px, 50% 100%, 0 800px);
             clip-path: polygon(0% 0%, 50% 100px, 100% 0%, 100% 800px, 50% 100%, 0 800px);
     background-color:#FAEBD7;
-    background-image: url('../img/texture/interlaced.png');
-    background-blend-mode: multiply;
 }
 
+.small-box {
+    height: 200px;
+    margin: 0px 0px 75px 0px;
+    clip-path: none;
+}
 
+@media screen and (min-width: 768px) {
+    .box {
+        padding: 130px 50px 130px 50px;
+    }
+}
 
 .img-container {
     display: flex;
@@ -153,27 +148,9 @@ h2 {
             clip-path: polygon(0% 0%, 50% 100px, 100% 0%, 100% calc(100% - 100px), 50% 100%, 0 calc(100% - 100px));
 }
 
-/* @media screen and (min-width: 768px) {
-    .img-container {
-        height: 800px;
-        margin-top: -60px;
-        max-height: 2000px;
-        -webkit-clip-path: polygon(0% 0%, 50% 100px, 100% 0%, 100% 700px, 50% 100%, 0 700px);
-                clip-path: polygon(0% 0%, 50% 100px, 100% 0%, 100% 700px, 50% 100%, 0 700px);
-    }
-} */
-
 img {
     max-width: 100%;
     height: auto;
-}
-
-.top-minus-80 {
-    top: -80px;
-}
-
-.top-minus-152 {
-    top: -152px;
 }
 
 .big-box {
@@ -188,13 +165,6 @@ img {
     height: auto;
     padding-right: 0;
     padding-left: 0;
-}
-
-.brown-box { 
-    background-color: #a08a71;
-}
-.flieder-box { 
-    background-color: #cdb8e0;
 }
 
 .form-wrapper {
@@ -338,7 +308,6 @@ ul {
 }
 
 p {
-    font-family: 'Amantic';
     font-size: 30px;
     padding: 10px;
     margin-top: 30px;
@@ -353,4 +322,16 @@ p {
     width: 100%;
     color: white;
     background-color: black;
+}
+
+.tick {
+    font-size: 40px;
+}
+
+.tick-text {
+    font-size: 20px;
+}
+
+.tick-flip {
+    top: 15px;
 }
