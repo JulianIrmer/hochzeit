@@ -59,16 +59,16 @@ async function submitForm(e) {
 
 function resetForm() {
     document.querySelector('.js-firstName').value = '';
-    const lastName = document.querySelector('.js-lastName').value = '';
-    const email = document.querySelector('.js-email').value = '';
-    const phone = document.querySelector('.js-phone').value = '';
-    const address = document.querySelector('.js-address').value = '';
-    const attendance = document.querySelector('.js-attendance').value;
-    const food = document.querySelector('.js-food').value;
-    const intolerances = document.querySelector('.js-intolerances').value = '';
-    const music = document.querySelector('.js-music').value = '';
-    const other = document.querySelector('.js-other').value = '';
-    const vax = document.querySelector('.js-vax').value = '';
+    document.querySelector('.js-lastName').value = '';
+    document.querySelector('.js-email').value = '';
+    document.querySelector('.js-phone').value = '';
+    document.querySelector('.js-address').value = '';
+    document.querySelector('.js-attendance').value;
+    document.querySelector('.js-food').value;
+    document.querySelector('.js-intolerances').value = '';
+    document.querySelector('.js-music').value = '';
+    document.querySelector('.js-other').value = '';
+    document.querySelector('.js-vax').value = '';
 }
 
 function showSuccessMessage() {
