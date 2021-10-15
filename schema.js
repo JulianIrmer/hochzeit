@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 let DataSchema = new mongoose.Schema({
+    weddingID: String,
     firstName: String,
     lastName: String,
     phone: String,

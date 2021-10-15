@@ -44,7 +44,8 @@ app.get('/api/getdata', async (req, res) => {
     if (req.query.pw !== PASSWORD) {
         res.json({success: false});
     }
-    const data = await DataSchema.find({});
+    const weddingID = req.query.weddingID;
+    const data = await DataSchema.find({weddingID: weddingID});
     const workbook = new ExcelJS.Workbook();
     const worksheet = workbook.addWorksheet('Gäste');
   
