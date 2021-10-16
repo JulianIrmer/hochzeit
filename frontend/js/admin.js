@@ -4,7 +4,7 @@ button.addEventListener('click', async () => {
     const pw = document.querySelector('.js-password');
     const url = 'http://kimundtom.herokuapp.com';
 
-    let response = await fetch(url + '/api/getdata?pw=' + pw.value);
+    let response = await fetch(url + '/api/getdata?pw=' + pw.value + '&weddingID=' + weddingID);
     response = await response.json();
     
     if (response.success) {

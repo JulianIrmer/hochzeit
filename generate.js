@@ -3,80 +3,7 @@ const path = require('path');
 const cssGen = require('css-generator');
 const inquirer = require('inquirer');
 
-const questions = [
-    {
-      type: 'input',
-      name: 'bodyBackgroundColor',
-      message: "What background color do you want?",
-      default: 'rgb(211, 211, 211)'
-    },
-    {
-      type: 'input',
-      name: 'contentBackgroundColor',
-      message: "What content background color do you want?",
-      default: '#a08a71'
-    },
-    {
-      type: 'input',
-      name: 'box1backgroundColor',
-      message: "First Box background color?",
-      default: '#FAEBD7'
-    },
-    {
-      type: 'input',
-      name: 'box1fontColor',
-      message: "First Box font color?",
-      default: 'black'
-    },
-    {
-      type: 'input',
-      name: 'box2backgroundColor',
-      message: "Second Box background color?",
-      default: '#cdb8e0'
-    },
-    {
-      type: 'input',
-      name: 'box2fontColor',
-      message: "Second Box font color?",
-      default: 'black'
-    },
-    {
-      type: 'list',
-      name: 'boxPattern',
-      message: "Box Pattern?",
-      choices: [
-            'doubleBubble', 
-            'geometricLeaves', 
-            'herrigbone', 
-            'interlaced', 
-            'moroccanFlower', 
-            'niceSnow', 
-            'pixelHeart'
-        ],
-        default: 'interlaced'
-    },
-    {
-      type: 'list',
-      name: 'headlineFont',
-      message: "Headline Font?",
-      choices: ['DancingScript', 'Biloxi', 'Amantic'],
-      default: 'DancingScript'
-    },
-    {
-      type: 'list',
-      name: 'subheadlineFont',
-      message: "Subheadline Font?",
-      choices: ['DancingScript', 'Biloxi', 'Amantic'],
-      default: 'Amantic'
-    },
-    {
-      type: 'list',
-      name: 'textFont',
-      message: "Text Font?",
-      choices: ['DancingScript', 'Biloxi', 'Amantic'],
-      default: 'Amantic'
-    }
-]
+const questions = require('./questions');
 
 function generateCSS(inputData) {
     const options = {
@@ -138,13 +65,33 @@ function generateCSS(inputData) {
 
     fs.unlink(outputDir + 'theme.css', function (err) {
         if (err) throw err;
-        console.log('File deleted!');
     });
 
     fs.appendFile(outputDir + 'theme.css', css.getOutput(), (err) => {
         if (err) throw err;
-        console.log('Saved!');
     });
+}
+
+function generateJS(answers) {
+    const string = `
+        const weddingID = '${answers.weddingID}';
+        const brideName = '${answers.bride}';
+        const groomName = '${answers.groom}';
+        const year = '${answers.year}';
+        const month = '${answers.month}';
+        const day = '${answers.day}';
+        const hour = '${answers.hour}';
+    `;
+    const outputDir = path.join(__dirname, './frontend/js/');
+
+    fs.unlink(outputDir + 'config.js', function (err) {
+        if (err) throw err;
+    });
+
+    fs.appendFile(outputDir + 'config.js', string, (err) => {
+        if (err) throw err;
+    });
+
 }
 
 function getUserData() {
@@ -154,6 +101,7 @@ function getUserData() {
         });
         console.log('Generating Files...');
         generateCSS(answers);
+        generateJS(answers)
         console.log('Done');
     });
 }

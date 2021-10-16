@@ -1,8 +1,46 @@
 function init() {
+    configureHTML();
     const submitButton = document.querySelector('.js-submit');
     submitButton.addEventListener('click', submitForm);
     intersection();
     warmUp();
+}
+
+function configureHTML() {
+    document.querySelectorAll('.js-bride-name').forEach((element) => {
+        element.innerHTML = brideName;
+    });
+
+    document.querySelectorAll('.js-groom-name').forEach((element) => {
+        element.innerHTML = groomName;
+    });
+
+    document.querySelector('.js-wedding-date').innerHTML = `${day}.${month}.${year}`;
+    const tick = Tick.DOM.create(document.querySelector('.js-flip-clock'));
+    setUpFlipClock(tick);
+}
+
+function setUpFlipClock(tick) {
+    const locale = {
+        DAY_PLURAL: 'Tage',
+        DAY_SINGULAR: 'Tag',
+        HOUR_PLURAL: 'Stunden',
+        HOUR_SINGULAR: 'Stunde',
+        MINUTE_PLURAL: 'Minuten',
+        MINUTE_SINGULAR: 'Minute',
+        SECOND_PLURAL: 'Sekunden',
+        SECOND_SINGULAR: 'Sekunde',
+    };
+
+    for (let key in locale) {
+        if (!locale.hasOwnProperty(key)) { continue; }
+        tick.setConstant(key, locale[key]);
+    }
+    const counter = Tick.count.down(`${year}-${month}-${day}T${hour}:00:00+01:00`);
+
+    counter.onupdate = function(value) {
+      tick.value = value;
+    };
 }
 
 function warmUp() {
@@ -27,6 +65,7 @@ async function submitForm(e) {
     const vax = document.querySelector('.js-vax').value;
 
     const data = {
+        weddingID,
         firstName,
         lastName,
         email,

@@ -20,8 +20,12 @@
         <header class="text-center position-relative">
             <img src="./img/header.jpg" alt="">
             <div class="headline-container text-white w-100">
-                <h1 class="headline-font">Kim & Tom</h1>
-                <h1 class="subheadline-font">24.09.2021</h1>
+                <h1 class="headline-font">
+                    <span class="js-bride-name"></span>
+                    <span> & </span>
+                    <span class="js-groom-name"></span>
+                </h1>
+                <h1 class="js-wedding-date subheadline-font">24.09.2021</h1>
             </div>
         </header>
 
@@ -30,9 +34,9 @@
             <div id="animated-thumbnails" class="js-image-container row"></div>
         </div> -->
 
-        <div class="box box-color-two small-box">
+        <div class="box box-color-two">
             <h2 class="headline-font animate left-to-right">Countdown</h2>
-            <div class="tick" data-did-init="handleTickInit">
+            <div class="tick js-flip-clock" data-did-init="setUpFlipClock">
                 <div data-repeat="true" data-layout="horizontal fit" data-transform="preset(d, h, m, s) -> delay">
                     <div class="tick-group">
                         <div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
@@ -165,7 +169,11 @@
                 <span class="d-block mb-4 animate fade-in">Wir würden uns freuen, wenn ihr uns neben der Zu- oder Absage noch weitere Informationen hinterlassen würdet. </span>
                 <span class="d-block mb-4 animate fade-in">Füllt die Felder aus, und schickt das Formular ab. </span>
                 <span class="d-block mb-4 animate fade-in">Wir freuen uns auf euch!</span>
-                <span class="headline-font subscription d-block w-100 text-center animate fade-in">Kim & Tom</span>
+                <span class="headline-font subscription d-block w-100 text-center animate fade-in">
+                    <span class="js-bride-name"></span>
+                    <span> & </span>
+                    <span class="js-groom-name"></span>
+                </span>
             </p>
         </div>
 
@@ -230,35 +238,8 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.2/lightgallery.min.js" integrity="sha512-V7SawhQGQwOTADAu1i4TTivsD6Cw54TcZYJAFfuPwUAutg+XIUQmc2blCB9mwdbCerqFO+TTRrt+gUgn/Np1PQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0-beta.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-TGN7EYTc45WA8WclbKLzonlVoFH+OzTpqDBSsjPc1tO+UHgJZHIwPDMRxFixCZOa+V5PdqKRFbUwkLAGS71QjA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <script src="https://unpkg.com/@pqina/flip/dist/flip.min.js"></script>
+    <script src="./js/config.js"></script>
     <script src="./js/main.js"></script>
     <!-- <script src="./js/gallery.min.js"></script> -->
-</div>
-
-</div>
-
-<script>
-    function handleTickInit(tick) {
-        var locale = {
-            DAY_PLURAL: 'Tage',
-            DAY_SINGULAR: 'Tag',
-            HOUR_PLURAL: 'Stunden',
-            HOUR_SINGULAR: 'Stunde',
-            MINUTE_PLURAL: 'Minuten',
-            MINUTE_SINGULAR: 'Minute',
-            SECOND_PLURAL: 'Sekunden',
-            SECOND_SINGULAR: 'Sekunde',
-        };
-
-        for (var key in locale) {
-            if (!locale.hasOwnProperty(key)) { continue; }
-            tick.setConstant(key, locale[key]);
-        }
-        var counter = Tick.count.down('2021-12-24T18:00:00+01:00');
-
-        counter.onupdate = function(value) {
-          tick.value = value;
-        };
-    }
-</script>
 </body>
 </html>
