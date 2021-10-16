@@ -77,10 +77,10 @@ function generateJS(answers) {
         const weddingID = '${answers.weddingID}';
         const brideName = '${answers.bride}';
         const groomName = '${answers.groom}';
-        const year = '${answers.year}';
-        const month = '${answers.month}';
-        const day = '${answers.day}';
-        const hour = '${answers.hour}';
+        const year = ${answers.year};
+        const month = ${answers.month};
+        const day = ${answers.day};
+        const hour = ${answers.hour};
     `;
     const outputDir = path.join(__dirname, './frontend/js/');
 
